@@ -24,11 +24,9 @@ func main() {
 	var secondDigit string
 	totalCount := 0
 	startIndex := 0
-	line := 3
 	for index, char := range input {
 		for key, digit := range digits {
 			if strings.Contains(input[startIndex:index], key) {
-				fmt.Println(input[startIndex:index])
 				if firstDigit == "" {
 					firstDigit = fmt.Sprint(digit)
 				}
@@ -45,8 +43,6 @@ func main() {
 		}
 		if char == '\n' {
 			number, _ := strconv.Atoi(firstDigit + secondDigit)
-			fmt.Println(number)
-			line++
 			totalCount += number
 			firstDigit = ""
 			secondDigit = ""

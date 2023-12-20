@@ -7,7 +7,6 @@ import (
 	"unicode"
 )
 
-// 53254
 func main() {
 	var digits = map[string]int{
 		"one":   1,
